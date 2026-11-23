@@ -13,8 +13,6 @@
 
 <p align="center">
   <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hashmisaif9@gmail.com" target="_blank"><img src="https://img.shields.io/badge/Email-12151E?style=for-the-badge&logo=gmail&logoColor=D4AF37" alt="Email"/></a>
-
-  
   <!-- LinkedIn → replace YOUR-LINKEDIN-ID, then delete the two comment marks around this line
   <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-ID"><img src="https://img.shields.io/badge/LinkedIn-12151E?style=for-the-badge&logo=linkedin&logoColor=D4AF37" alt="LinkedIn"/></a>
   -->
