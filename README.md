@@ -88,9 +88,6 @@ while advancing my expertise in **Python for data science and machine learning**
   <sub><b>Also familiar with</b> &nbsp;Cisco Packet Tracer &nbsp;·&nbsp; VMware</sub>
 </p>
 
-<p align="center"><sub>◆ &nbsp;<b>FOUNDATIONS</b> &nbsp;◆</sub><br/>
-  <sub>OOP &nbsp;·&nbsp; Data Structures &amp; Algorithms &nbsp;·&nbsp; DBMS &nbsp;·&nbsp; Computer Organization &amp; Assembly</sub>
-</p>
 
 <br/>
 
