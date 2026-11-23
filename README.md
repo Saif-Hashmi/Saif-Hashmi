@@ -17,7 +17,6 @@
   <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-ID"><img src="https://img.shields.io/badge/LinkedIn-12151E?style=for-the-badge&logo=linkedin&logoColor=D4AF37" alt="LinkedIn"/></a>
   -->
   <a href="https://github.com/Saif-Hashmi?tab=repositories"><img src="https://img.shields.io/badge/Repositories-12151E?style=for-the-badge&logo=github&logoColor=D4AF37" alt="Repositories"/></a>
-  <img src="https://img.shields.io/badge/Lahore,_PK-12151E?style=for-the-badge&logo=googlemaps&logoColor=D4AF37" alt="Lahore"/>
   <img src="https://komarev.com/ghpvc/?username=Saif-Hashmi&style=for-the-badge&color=12151E&label=VIEWS" alt="Profile views"/>
 </p>
 
