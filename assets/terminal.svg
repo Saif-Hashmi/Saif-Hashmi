@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="380" viewBox="0 0 520 380">
+  <defs>
+    <linearGradient id="win" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#12151E"/>
+      <stop offset="1" stop-color="#0A0C12"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#D4AF37" stop-opacity="0.55"/>
+      <stop offset="0.5" stop-color="#D4AF37" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#D4AF37" stop-opacity="0.45"/>
+    </linearGradient>
+    <style>
+      .m { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 15px; }
+      .cmd { fill: #E9DCC0; }
+      .pr  { fill: #D4AF37; }
+      .out { fill: #9AA0AD; }
+      .hi  { fill: #F3D78A; }
+      .l { animation: show .35s ease both; }
+      @keyframes show { from { opacity: 0; transform: translateX(-6px); } to { opacity: 1; transform: translateX(0); } }
+      .cur { animation: blink 1s steps(1) infinite; }
+      @keyframes blink { 50% { opacity: 0; } }
+      .scan { animation: scan 6s linear infinite; }
+      @keyframes scan { from { transform: translateY(-40px); } to { transform: translateY(400px); } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+    </style>
+    <clipPath id="clip"><rect width="520" height="380" rx="14"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#clip)">
+    <rect width="520" height="380" fill="url(#win)"/>
+    <!-- title bar -->
+    <rect width="520" height="40" fill="#0E1018"/>
+    <path d="M0 40H520" stroke="#D4AF37" stroke-opacity="0.18"/>
+    <circle cx="22" cy="20" r="5.5" fill="#D4AF37"/>
+    <circle cx="42" cy="20" r="5.5" fill="#D4AF37" fill-opacity="0.55"/>
+    <circle cx="62" cy="20" r="5.5" fill="#D4AF37" fill-opacity="0.25"/>
+    <text x="260" y="25" text-anchor="middle" class="m" font-size="13" fill="#6F7482">saif@umt : ~/profile</text>
+
+    <!-- lines -->
+    <g class="m">
+      <text x="22" y="76"  class="l" style="animation-delay:.3s"><tspan class="pr">❯ </tspan><tspan class="cmd">whoami</tspan></text>
+      <text x="22" y="100" class="l hi" style="animation-delay:.8s">  Saif Ur Rehman Hashmi</text>
+
+      <text x="22" y="136" class="l" style="animation-delay:1.4s"><tspan class="pr">❯ </tspan><tspan class="cmd">cat focus.txt</tspan></text>
+      <text x="22" y="160" class="l out" style="animation-delay:1.9s">  ▸ Full-stack web development</text>
+      <text x="22" y="182" class="l out" style="animation-delay:2.2s">  ▸ Workflow automation with n8n</text>
+      <text x="22" y="204" class="l out" style="animation-delay:2.5s">  ▸ Python for Data &amp; Machine Learning</text>
+
+      <text x="22" y="240" class="l" style="animation-delay:3.1s"><tspan class="pr">❯ </tspan><tspan class="cmd">echo $DEGREE</tspan></text>
+      <text x="22" y="264" class="l out" style="animation-delay:3.6s">  BSCS · 5th Semester · UMT Lahore</text>
+
+      <text x="22" y="300" class="l" style="animation-delay:4.2s"><tspan class="pr">❯ </tspan><tspan class="cmd">./next --goal</tspan></text>
+      <text x="22" y="324" class="l hi" style="animation-delay:4.7s">  AI / ML Engineer</text>
+
+      <g class="l" style="animation-delay:5.2s">
+        <text x="22" y="356"><tspan class="pr">❯ </tspan></text>
+        <rect class="cur" x="42" y="343" width="9" height="17" fill="#F3D78A"/>
+      </g>
+    </g>
+
+    <!-- subtle scanline -->
+    <rect class="scan" x="0" y="0" width="520" height="40" fill="#D4AF37" fill-opacity="0.025"/>
+  </g>
+  <rect x="0.75" y="0.75" width="518.5" height="378.5" rx="14" fill="none" stroke="url(#edge)" stroke-width="1.5"/>
+</svg>

@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="0%" r="90%">
+      <stop offset="0%" stop-color="#1A1710"/>
+      <stop offset="55%" stop-color="#0D0F15"/>
+      <stop offset="100%" stop-color="#07080C"/>
+    </radialGradient>
+
+    <!-- moving gold shimmer for the name -->
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#9C7A2B"/>
+      <stop offset="0.35" stop-color="#D4AF37"/>
+      <stop offset="0.5" stop-color="#FFF1C1"/>
+      <stop offset="0.65" stop-color="#D4AF37"/>
+      <stop offset="1" stop-color="#9C7A2B"/>
+      <animateTransform attributeName="gradientTransform" type="translate"
+        values="-1 0; 1 0" dur="4.5s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="goldStatic" gradientUnits="userSpaceOnUse" x1="340" y1="0" x2="860" y2="0">
+      <stop offset="0" stop-color="#D4AF37" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#F3D78A"/>
+      <stop offset="1" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient>
+
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#D4AF37" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+
+    <filter id="glow" x="-20%" y="-50%" width="140%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <style>
+      .serif { font-family: Georgia, 'Times New Roman', 'Liberation Serif', serif; }
+      .sans  { font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; }
+      .fade1 { animation: up 1.2s cubic-bezier(.2,.7,.2,1) .2s both; }
+      .fade2 { animation: up 1.2s cubic-bezier(.2,.7,.2,1) .7s both; }
+      .fade3 { animation: up 1.2s cubic-bezier(.2,.7,.2,1) 1.5s both; }
+      .fade4 { animation: up 1.2s cubic-bezier(.2,.7,.2,1) 2.0s both; }
+      @keyframes up { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+
+      .draw { stroke-dasharray: 520; animation: draw 1.6s ease-out 1.1s both; }
+      @keyframes draw { from { stroke-dashoffset: 520; } to { stroke-dashoffset: 0; } }
+
+      .spin  { transform-origin: 1105px 170px; animation: spin 40s linear infinite; }
+      .spinr { transform-origin: 1105px 170px; animation: spin 28s linear infinite reverse; }
+      .spin2  { transform-origin: 95px 170px; animation: spin 46s linear infinite reverse; }
+      @keyframes spin { to { transform: rotate(360deg); } }
+
+      .p { animation: float 7s ease-in-out infinite; }
+      @keyframes float { 0%,100% { transform: translateY(0); opacity: .15; } 50% { transform: translateY(-18px); opacity: .9; } }
+
+      .corner { animation: fadein 1s ease 0.1s both; }
+      @keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+    </style>
+  </defs>
+
+  <!-- canvas -->
+  <rect width="1200" height="340" rx="18" fill="url(#bg)"/>
+  <rect width="1200" height="340" rx="18" fill="url(#grid)"/>
+  <rect x="0.5" y="0.5" width="1199" height="339" rx="18" fill="none" stroke="#D4AF37" stroke-opacity="0.22"/>
+
+  <!-- orbit rings (right) -->
+  <g class="spin" fill="none" stroke="#D4AF37">
+    <circle cx="1105" cy="170" r="100" stroke-opacity="0.10" stroke-dasharray="2 10"/>
+    <circle cx="1205" cy="170" r="4" fill="#D4AF37" fill-opacity="0.8" stroke="none"/>
+  </g>
+  <g class="spinr" fill="none" stroke="#D4AF37">
+    <circle cx="1105" cy="170" r="64" stroke-opacity="0.16"/>
+    <circle cx="1105" cy="106" r="3" fill="#F3D78A" stroke="none"/>
+  </g>
+  <!-- orbit rings (left) -->
+  <g class="spin2" fill="none" stroke="#D4AF37">
+    <circle cx="95" cy="170" r="84" stroke-opacity="0.08" stroke-dasharray="1 8"/>
+    <circle cx="11" cy="170" r="3" fill="#D4AF37" fill-opacity="0.7" stroke="none"/>
+  </g>
+
+  <!-- floating particles -->
+  <g fill="#F3D78A">
+    <circle class="p" cx="260" cy="250" r="1.6" style="animation-delay:0s"/>
+    <circle class="p" cx="340" cy="90"  r="1.2" style="animation-delay:1.2s"/>
+    <circle class="p" cx="880" cy="260" r="1.8" style="animation-delay:2.1s"/>
+    <circle class="p" cx="820" cy="70"  r="1.2" style="animation-delay:3.3s"/>
+    <circle class="p" cx="560" cy="300" r="1.4" style="animation-delay:.6s"/>
+    <circle class="p" cx="700" cy="40"  r="1.1" style="animation-delay:4.2s"/>
+    <circle class="p" cx="1110" cy="290" r="1.5" style="animation-delay:2.7s"/>
+    <circle class="p" cx="90"  cy="60"  r="1.3" style="animation-delay:5s"/>
+  </g>
+
+  <!-- corner brackets -->
+  <g class="corner" stroke="#D4AF37" stroke-width="1.6" fill="none" stroke-opacity="0.7">
+    <path d="M28 58V28H58"/>
+    <path d="M1142 28H1172V58"/>
+    <path d="M28 282V312H58"/>
+    <path d="M1172 282V312H1142"/>
+  </g>
+
+  <!-- eyebrow -->
+  <g class="fade1">
+    <text x="600" y="92" text-anchor="middle" class="sans" font-size="15" letter-spacing="7" fill="#D4AF37" fill-opacity="0.9">BSCS  ·  UMT  ·  LAHORE</text>
+  </g>
+
+  <!-- name -->
+  <g class="fade2">
+    <text x="600" y="168" text-anchor="middle" class="serif" font-size="64" font-weight="700" letter-spacing="1.5" fill="url(#gold)" filter="url(#glow)">Saif Ur Rehman Hashmi</text>
+  </g>
+
+  <!-- underline draw + diamond -->
+  <path class="draw" d="M340 198H860" stroke="url(#goldStatic)" stroke-width="1.6" fill="none"/>
+  <g class="fade3">
+    <rect x="594" y="192" width="12" height="12" transform="rotate(45 600 198)" fill="#0D0F15" stroke="#F3D78A" stroke-width="1.4"/>
+  </g>
+
+  <!-- subtitle -->
+  <g class="fade3">
+    <text x="600" y="244" text-anchor="middle" class="sans" font-size="22" letter-spacing="2" fill="#E9DCC0">Full-Stack Developer   <tspan fill="#D4AF37">◆</tspan>   Aspiring AI / ML Engineer</text>
+  </g>
+  <g class="fade4">
+    <text x="600" y="282" text-anchor="middle" class="sans" font-size="14" letter-spacing="3" fill="#8A8F9C">C++  ·  PYTHON  ·  JAVASCRIPT  ·  MYSQL  ·  N8N</text>
+  </g>
+</svg>

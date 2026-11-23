@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="64" viewBox="0 0 900 64">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#C9A13B"/>
+      <stop offset="0.45" stop-color="#F3D78A"/>
+      <stop offset="0.55" stop-color="#FFF4D2"/>
+      <stop offset="1" stop-color="#C9A13B"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="-1 0; 1 0" dur="5s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="line" gradientUnits="userSpaceOnUse" x1="251" y1="0" x2="896" y2="0">
+      <stop offset="0" stop-color="#D4AF37" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient>
+    <style>
+      .num { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; font-size: 14px; letter-spacing: 2px; fill: #D4AF37; }
+      .t { font-family: Georgia, 'Times New Roman', 'Liberation Serif', serif; font-size: 30px; font-weight: 700; letter-spacing: 1px; }
+      .in { animation: in 0.9s cubic-bezier(.2,.7,.2,1) both; }
+      @keyframes in { from { opacity: 0; transform: translateX(-12px); } to { opacity: 1; transform: translateX(0); } }
+      .draw { stroke-dasharray: 900; animation: d 1.4s ease-out .4s both; }
+      @keyframes d { from { stroke-dashoffset: 900; } to { stroke-dashoffset: 0; } }
+      .spin { transform-origin: 13px 32px; animation: s 6s linear infinite; }
+      @keyframes s { to { transform: rotate(360deg); } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+    </style>
+  </defs>
+  <g class="spin"><rect x="7" y="26" width="12" height="12" transform="rotate(45 13 32)" fill="none" stroke="#F3D78A" stroke-width="1.5"/></g>
+  <g class="in">
+    <text x="36" y="38" class="num">04</text>
+    <text x="72" y="42" class="t" fill="url(#g)">Analytics</text>
+  </g>
+  <path class="draw" d="M251 33H896" stroke="url(#line)" stroke-width="1.2" fill="none"/>
+</svg>
