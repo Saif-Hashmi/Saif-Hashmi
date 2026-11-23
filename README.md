@@ -91,6 +91,7 @@ while advancing my expertise in **Python for data science and machine learning**
 <br/>
 
 <!-- ─────────────────────────────── 03 · SELECTED WORK ─────────────────────────────── -->
+<!-- SELECTED WORK hidden for now. To show it again, delete this line and the closing line below.
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="./assets/light/title-work.svg">
   <img src="./assets/title-work.svg" width="100%" alt="03 Selected Work"/>
@@ -104,6 +105,7 @@ while advancing my expertise in **Python for data science and machine learning**
 </p>
 
 <br/>
+-->
 
 <!-- ─────────────────────────────── 04 · ANALYTICS ─────────────────────────────── -->
 <picture>
